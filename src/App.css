@@ -1,38 +1,143 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* Add Meeting Button */
+.add-meeting-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Meeting Card */
+.meeting-card {
+  border: 1px solid #000;
+  padding: 20px;
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Meeting Card - Text Section */
+.meeting-card .text-section {
   display: flex;
   flex-direction: column;
+  gap: 15px; /* 각 항목 사이 간격 */
+}
+
+.meeting-card .text-section h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.meeting-card .text-section p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Meeting Card - Button Group */
+.meeting-card .button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-left: auto; /* 버튼 그룹을 오른쪽 끝으로 정렬 */
+}
+
+/* Example for Text Styling */
+.meeting-card .text-section .title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.meeting-card .text-section .amount,
+.meeting-card .text-section .date,
+.meeting-card .text-section .members {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Members Section */
+.members .member {
+  display: inline-block;
+  background-color: #e0e0e0;
+  margin: 2px;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+/* Add Meeting Page */
+.add-meeting-page {
+  background-color: wheat;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #F00;
+  max-width: 900px;
+  height: 1024px;
+  gap: 50px;
+  margin: auto;
+  padding: 20px;
+}
+
+.add-meeting-page header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-meeting-page header h1 {
+  font-size: 30px;
+}
+
+.add-meeting-page label {
+  display: flex;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.add-meeting-page input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.members-list {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.member-item {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Button Styles */
+.add-meeting-page button {
+  background-color: #000;
   color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.add-meeting-page .button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-meeting-page .button-group button {
+  width: 48%;
+  height: 50px;
 }
